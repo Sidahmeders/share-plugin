@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="sharePlugin">
+<head lang="en">
+  <title>Share Plugin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link href="../../../../styles/helper.css" rel="stylesheet"/>
+  <link href="../../../../styles/siteIcons.css" rel="stylesheet"/>
+
+  <!-- JS -->
+  <script src="../../../../scripts/buildfire.js"></script>
+  <script src="../../../../scripts/angular/angular.min.js"></script>
+  <script src="../../../../scripts/tinymce/tinymce.min.js"></script>
+  <script src="../../../../scripts/tinymce/ui-tinymce.js"></script>
+  <script src="../../../../scripts/jquery/jquery-1.11.2.min.js"></script>
+
+  <script src="../../../../scripts/sortable.min.js"></script>
+  <script
+      src="../../../../scripts/buildfire/components/carousel/carousel.js"></script>
+  <script src="../../js/shared.js"></script>
+  <script src="app.js"></script>
+
+</head>
+<body data-ng-controller="sharePluginCtrl" data-ng-cloak
+      data-ng-show="datastoreInitialized">
+<div class="share-plugin">
+  <div class="item clearfix row">
+    <div class="col-md-9 pull-right">
+      <p>NOTE: You can configure where Share App link will take your users by
+        going
+        to "Share Settings" under "Settings" in the left menu.</p>
+    </div>
+  </div>
+  <br>
+  <div id="carousel"></div>
+  <hr class="none">
+  <div class="item clearfix row">
+    <div class="labels col-md-3 padding-right-zero pull-left">
+      <span>Content Body</span>
+    </div>
+    <div class="main col-md-9 pull-right">
+            <textarea id="contentBody" ui-tinymce="editorOptions"
+                      class="form-control" rows="5"
+                      data-ng-model="data.content.contentBody"></textarea>
+    </div>
+  </div>
+  <hr class="none">
+  <div class="item clearfix row">
+    <div class="labels col-md-3 padding-right-zero pull-left">
+      <span>Share Message</span>
+    </div>
+    <div class="main col-md-9 pull-right">
+            <textarea id="shareMessage" class="form-control" rows="5"
+                      data-ng-model="data.content.shareMessage"></textarea>
+    </div>
+  </div>
+</div>
+</body>
+</html>
